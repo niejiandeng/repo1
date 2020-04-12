@@ -22,7 +22,8 @@ public class OrderController {
     @Autowired
     RestTemplate restTemplate;
 
-    private static final String PAYMENT_URL = "http://127.0.0.1:8001";
+    //private static final String PAYMENT_URL = "http://127.0.0.1:8002";
+    private static final String PAYMENT_URL = "http://CLOUD-PAYMENT-SERVICE";
 
     /**
      * 远程调用payment 插入
