@@ -4,7 +4,7 @@ spring:
   application:
     name: cloud-order-service
 
-#设置feign客户端超时时间
+#设置feign客户端超时时间  默认为1秒
 ribbon:
   ReadTimeout: 5000
   ConnectTimeout: 5000
