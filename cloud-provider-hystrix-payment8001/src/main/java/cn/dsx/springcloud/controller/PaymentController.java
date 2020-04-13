@@ -37,14 +37,20 @@ public class PaymentController {
         log.info("*****result: " + result);
         return result;
     }
-    //
-    //// 服务熔断
-    //@GetMapping("/payment/circuit/{id}")
-    //public String paymentCircuitBreaker(@PathVariable("id") Integer id) {
-    //    String result = paymentService.paymentCircuitBreaker(id);
-    //    log.info("****result: " + result);
-    //    return result;
-    //}
+
+    /**
+     * http://127.0.0.1:8001/payment/circuit/1
+     * http://127.0.0.1:8001/payment/circuit/-1    连续访问多次 断路打开    此时正常访问 要稍等片刻 断路器才关闭
+     * 服务熔断
+     * @param id
+     * @return
+     */
+    @GetMapping("/payment/circuit/{id}")
+    public String paymentCircuitBreaker(@PathVariable("id") Integer id) {
+        String result = paymentService.paymentCircuitBreaker(id);
+        log.info("****result: " + result);
+        return result;
+    }
 
 
 }
