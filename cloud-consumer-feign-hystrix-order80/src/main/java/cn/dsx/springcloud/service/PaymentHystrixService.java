@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 /**
+ * 客户端配置
+ * fallback指定 服务降级方法
  * @Classname: PaymentHystrixService
  * @Author: Dsx
  * @Date: 2020/04/13/10:30

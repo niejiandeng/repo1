@@ -5,6 +5,8 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.stereotype.Service;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * @Classname: PaymentServiceImpl
  * @Author: Dsx
@@ -32,13 +34,13 @@ public class PaymentServiceImpl implements PaymentService {
     public String paymentInfo_TimeOut(Integer id) {
         //int timeNumber = 2000;
         int timeNumber = 5000;
-        //try {
-        //    TimeUnit.MILLISECONDS.sleep(timeNumber);
-        //} catch (InterruptedException e) {
-        //    e.printStackTrace();
-        //}
+        try {
+            TimeUnit.MILLISECONDS.sleep(timeNumber);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
-        int i = 10 / 0;
+        //int i = 10 / 0;
 
         return "线程池： " + Thread.currentThread().getName() + " PaymenyInfo_TimeOut,id: " + id + "\t" + "O(∩_∩)O哈哈~" + " 耗时" + timeNumber + "毫秒";
     }
