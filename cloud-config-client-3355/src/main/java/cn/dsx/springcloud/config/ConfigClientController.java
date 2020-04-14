@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date: 2020/04/14/9:32
  */
 @RestController
-@RefreshScope//刷新
+@RefreshScope//刷新        curl -X POST "http://localhost:3355/actuator/refresh"
 public class ConfigClientController{
     @Value("${config.info}")
     private String configInfo;
