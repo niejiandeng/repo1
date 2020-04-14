@@ -5,6 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
+ *
+ * curl -X POST "http://localhost:3344/actuator/bus-refresh"
+ * curl -X POST "http://localhost:3344/actuator/bus-refresh"
+ * curl -X POST "http://localhost:3344/actuator/bus-refresh"
  * @Classname: ConfigCenterMain3344
  * @Author: Dsx
  * @Date: 2020/04/14/9:04
