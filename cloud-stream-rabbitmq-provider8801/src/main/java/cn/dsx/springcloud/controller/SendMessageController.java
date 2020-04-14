@@ -12,14 +12,12 @@ import javax.annotation.Resource;
  * @Date: 2020/04/14/16:38
  */
 @RestController
-public class SendMessageController
-{
+public class SendMessageController{
     @Resource
     private IMessageProvider messageProvider;
 
     @GetMapping(value = "/sendMessage")
-    public String sendMessage()
-    {
+    public String sendMessage()    {
         return messageProvider.send();
     }
 
