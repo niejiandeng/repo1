@@ -8,7 +8,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
+        server-addr: 192.168.18.143:3000 #配置Nacos地址
 
 
 #消费者将要去访问的微服务名称(注册成功进nacos的微服务提供者)   用spring boot  value注入进来实现代码和配置解耦

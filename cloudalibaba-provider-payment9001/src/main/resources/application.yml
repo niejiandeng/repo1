@@ -7,7 +7,8 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848 #配置Nacos地址
+        # http://192.168.18.143:3000/nacos   linux中配置了mysql作为数据库 以及配置了两个nacos作为集群 nginx作为转发
+        server-addr: 192.168.18.143:3000 #配置Nacos地址
 
 management:
   endpoints:
