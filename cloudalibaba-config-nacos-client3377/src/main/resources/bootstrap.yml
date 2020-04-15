@@ -12,7 +12,7 @@ spring:
       config:
         server-addr: 192.168.18.143:3000  #Nacos作为配置中心地址
         file-extension: yaml #指定yaml格式的配置
-        group: DEV_GROUP   # 指定组   如果没有指定组 会去默认的组查找 
+        group: DEV_GROUP   # 指定组   如果没有指定组 会去默认的组查找
         namespace: 424d865c-08e9-43ba-8f24-e18c7c2102f2 #指定命名空间     命名空间包括组  组中包括不同的配置  如果没有指定命名空间，会去默认的命名空间中查找
 
 
@@ -20,3 +20,14 @@ spring:
 # nacos-config-client-dev.yaml
 
 # nacos-config-client-test.yaml   ----> config.info
+
+
+
+
+# 创建数据库 nacos_config   执行nacos-mysql.sql脚本
+# \nacos\conf下的application.properties添加 mysql配置
+#  spring.datasource.platform=mysql
+#  db.num=1
+#  db.url.0=jdbc:mysql://127.0.0.1:3306/nacos_config?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
+#  db.user=root
+#  db.password=root
