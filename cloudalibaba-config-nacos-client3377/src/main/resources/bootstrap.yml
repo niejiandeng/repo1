@@ -8,12 +8,12 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848 #Nacos服务注册中心地址
+        server-addr: 192.168.18.143:3000  #Nacos服务注册中心地址
       config:
-        server-addr: localhost:8848 #Nacos作为配置中心地址
+        server-addr: 192.168.18.143:3000  #Nacos作为配置中心地址
         file-extension: yaml #指定yaml格式的配置
-        group: DEV_GROUP   # 指定组
-        namespace: 0815babf-a505-4fa6-bf58-9aa9bc1ee582 #指定命名空间     命名空间包括组  组中包括不同的配置
+        group: DEV_GROUP   # 指定组   如果没有指定组 会去默认的组查找 
+        namespace: 424d865c-08e9-43ba-8f24-e18c7c2102f2 #指定命名空间     命名空间包括组  组中包括不同的配置  如果没有指定命名空间，会去默认的命名空间中查找
 
 
 # ${spring.application.name}-${spring.profile.active}.${spring.cloud.nacos.config.file-extension}
