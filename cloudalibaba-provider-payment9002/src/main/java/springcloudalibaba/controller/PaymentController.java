@@ -1,4 +1,4 @@
-package cn.dsx.springcloudalibaba.controller;
+package springcloudalibaba.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +16,7 @@ public class PaymentController{
     private String serverPort;
 
     @GetMapping(value = "/payment/nacos/{id}")
-    public String getPayment(@PathVariable("id") Integer id)    {
+    public String getPayment(@PathVariable("id") Integer id){
         return "nacos registry, serverPort: "+ serverPort+"\t id"+id;
     }
 }
