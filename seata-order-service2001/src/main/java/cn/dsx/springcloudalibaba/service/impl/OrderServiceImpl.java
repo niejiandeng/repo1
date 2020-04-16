@@ -32,6 +32,7 @@ public class OrderServiceImpl implements OrderService{
     /**
      * 创建订单->调用库存服务扣减库存->调用账户服务扣减账户余额->修改订单状态
      * 简单说：下订单->扣库存->减余额->改状态
+     *  @GlobalTransactional 注解 表示 事务发起方(TM)   被调用的成为事务参与方(RM)    seata服务器是协调方(TC)
      * name = "fsp-create-order" 唯一性即可   没有命名要求
      */
     @Override
