@@ -36,7 +36,8 @@ public class CircleBreakerController {
     //@SentinelResource(value = "fallback") //没有配置
     //@SentinelResource(value = "fallback",fallback = "handlerFallback") //fallback只负责业务异常
     //@SentinelResource(value = "fallback",blockHandler = "blockHandler") //blockHandler只负责sentinel控制台配置违规
-    @SentinelResource(value = "fallback",fallback = "handlerFallback",blockHandler = "blockHandler",exceptionsToIgnore = {IllegalArgumentException.class})
+    @SentinelResource(value = "fallback",fallback = "handlerFallback",blockHandler = "blockHandler",
+            exceptionsToIgnore = {IllegalArgumentException.class})//exceptionsToIgnore 异常忽略
     public CommonResult<Payment> fallback(@PathVariable Long id){
         CommonResult<Payment> result = restTemplate.getForObject(SERVICE_URL + "/paymentSQL/"+id,CommonResult.class,id);
 
